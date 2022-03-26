@@ -17,6 +17,12 @@
       "nome": "Shampoo 1",
       "preco": 10,
       "imagem": "img/pedigree.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "Shampoo 2",
+      "preco": 12,
+      "imagem": "img/pedigree.jpg"
     }
   ]
 }

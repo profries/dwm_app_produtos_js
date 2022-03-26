@@ -1,9 +1,19 @@
 window.onload = function () {
-    carregaProdutos();
-    setInterval(carregaProdutos, 10000);
+    buscarProdutos();
+    setInterval(buscarProdutos, 10000);
 }
 
-function carregaProdutos() {
+function buscarProdutos() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        document.querySelector("#produtos").innerHTML =
+        this.responseText;
+    }
+    xhttp.open("GET", "http://localhost:3000/produtos");
+    xhttp.send();
+}
+
+function carregarProdutos() {
     console.log("Carregando produtos");
     document.querySelector("#produtos").innerHTML = `
     <div class="w3-col l4 m6 s12 w3-container w3-padding-16">
